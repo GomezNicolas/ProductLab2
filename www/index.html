@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/main.js" type="text/javascript"></script>
+  <script src="js/jquery.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).on('mobileinit', function() {
+      $.mobile.defaultPageTransition = 'slide';
+    });
+  </script>
+
+  <script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+</head>
+<body>
+
+  <!-- Start of first page -->
+  <div data-role="page" id="foo">
+  
+      <div data-role="header">
+        <h1>Product Lab 2</h1>
+      </div><!-- /header -->
+
+
+      <form>
+        <input type="text" id="username" placeholder="Choose Username">
+        <input type="password" id="password" placeholer="Choose Password">
+        <button type="button" onclick="getInfo()">Click Me</button>
+      </form>
+    
+      <div role="main" class="ui-content">
+        <a href="#bar" class="ui-btn">Second page</a>
+      </div><!-- /content -->
+    
+      <!-- Data position fixed zet footer beneden -->
+      <div data-role="footer" data-position = "fixed">
+        <h4>Footer page 1</h4>
+      </div><!-- /footer -->
+  </div><!-- /page -->
+
+
+  
+  <!-- Start of second page -->
+  <div data-role="page" id="bar">
+  
+    <div data-role="header">
+      <!-- Data transition slide naar links meer met reverse dus naar rechts-->
+      <a href="#foo" class="ui-btn" data-direction="reverse"><</a> 
+        <h1>Second Page</h1>
+    </div><!-- /header -->
+  
+    <div role="main" class="ui-content">
+      <p>Dit is de tweede pagina</p>
+    </div><!-- /content -->
+  
+    <div data-role="footer" data-position = "fixed">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page -->
+
+  <script src="js/main.js"></script>
+  </body>
+</html>
